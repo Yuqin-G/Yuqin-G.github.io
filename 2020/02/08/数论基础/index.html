@@ -18,15 +18,15 @@
   <meta name="author" content="gyq">
   <meta name="keywords" content="">
   
-    <meta name="description" content="数论基础We have $a^2+b^2&#x3D;3025$,what’s the value of $a+b$ ? sssss test 1 相关定理1.1 Fermat小定理$p$ 为质数，若 $(a,p)&#x3D;1$，则 $a^{p-1}\equiv1(mod\ p)$。 1.2 Euler定理若 $(a,p)&#x3D;1$，则$a^{\varphi(p)-1}\equiv1(mod">
+    <meta name="description" content="数论基础1 相关定理1.1 Fermat小定理$p$ 为质数，若 $(a,p)&#x3D;1$，则 $a^{p-1}\equiv1(mod\ p)$。 1.2 Euler定理若 $(a,p)&#x3D;1$，则$a^{\varphi(p)-1}\equiv1(mod\ p)$，其中 $\varphi(p)$ 为Euler函数。 1.3 斐蜀定理任意整数 $a,b$ ，存在整数 $x,y$ ，满足$">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数论">
 <meta property="og:url" content="http://gyq1225.top/2020/02/08/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="G_G">
-<meta property="og:description" content="数论基础We have $a^2+b^2&#x3D;3025$,what’s the value of $a+b$ ? sssss test 1 相关定理1.1 Fermat小定理$p$ 为质数，若 $(a,p)&#x3D;1$，则 $a^{p-1}\equiv1(mod\ p)$。 1.2 Euler定理若 $(a,p)&#x3D;1$，则$a^{\varphi(p)-1}\equiv1(mod">
+<meta property="og:description" content="数论基础1 相关定理1.1 Fermat小定理$p$ 为质数，若 $(a,p)&#x3D;1$，则 $a^{p-1}\equiv1(mod\ p)$。 1.2 Euler定理若 $(a,p)&#x3D;1$，则$a^{\varphi(p)-1}\equiv1(mod\ p)$，其中 $\varphi(p)$ 为Euler函数。 1.3 斐蜀定理任意整数 $a,b$ ，存在整数 $x,y$ ，满足$">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-02-08T02:39:55.000Z">
-<meta property="article:modified_time" content="2023-07-28T04:24:18.123Z">
+<meta property="article:modified_time" content="2023-07-28T12:47:19.050Z">
 <meta property="article:author" content="gyq">
 <meta property="article:tag" content="algo">
 <meta name="twitter:card" content="summary_large_image">
@@ -220,7 +220,7 @@
         
         
         
-          28 mins
+          27 mins
         
       </span>
     
@@ -270,9 +270,7 @@
             
               <div class="markdown-body">
                 
-                <h3 id="数论基础"><a href="#数论基础" class="headerlink" title="数论基础"></a>数论基础</h3><p>We have $a^2+b^2&#x3D;3025$,what’s the value of $a+b$ ?</p>
-<p>sssss test</p>
-<h4 id="1-相关定理"><a href="#1-相关定理" class="headerlink" title="1 相关定理"></a>1 相关定理</h4><h5 id="1-1-Fermat小定理"><a href="#1-1-Fermat小定理" class="headerlink" title="1.1 Fermat小定理"></a>1.1 Fermat小定理</h5><p>$p$ 为质数，若 $(a,p)&#x3D;1$，则 $a^{p-1}\equiv1(mod\ p)$。</p>
+                <h3 id="数论基础"><a href="#数论基础" class="headerlink" title="数论基础"></a>数论基础</h3><h4 id="1-相关定理"><a href="#1-相关定理" class="headerlink" title="1 相关定理"></a>1 相关定理</h4><h5 id="1-1-Fermat小定理"><a href="#1-1-Fermat小定理" class="headerlink" title="1.1 Fermat小定理"></a>1.1 Fermat小定理</h5><p>$p$ 为质数，若 $(a,p)&#x3D;1$，则 $a^{p-1}\equiv1(mod\ p)$。</p>
 <h5 id="1-2-Euler定理"><a href="#1-2-Euler定理" class="headerlink" title="1.2 Euler定理"></a>1.2 Euler定理</h5><p>若 $(a,p)&#x3D;1$，则$a^{\varphi(p)-1}\equiv1(mod\ p)$，其中 $\varphi(p)$ 为Euler函数。</p>
 <h5 id="1-3-斐蜀定理"><a href="#1-3-斐蜀定理" class="headerlink" title="1.3 斐蜀定理"></a>1.3 斐蜀定理</h5><p>任意整数 $a,b$ ，存在整数 $x,y$ ，满足$ax+by&#x3D;(a,b)$。</p>
 <p>$proof:$   当 $b&#x3D;0$ 时 $(a,b)&#x3D;a$ 。当 $b\neq0$时，假设$(x,y) \rightarrow (a,b)$ ，$(x_1,y_1) \rightarrow (b,a % b)$ ，可以得到 $(x,y)$ 和 $(x_1,y_1)$ 之间的关系。由欧几里得算法可知 $(a,b)&#x3D;(b, a\ % \ b) &#x3D;…&#x3D;(x,0)$ 只需求得每一相邻层的 $x,y$ 关系通过递归即可得逆推得到 $(x,y)$ 。<br>$ax+by&#x3D;(a,b)&#x3D;bx_1+(a-b*\left \lfloor \frac{a}{b} \right \rfloor )y_1&#x3D;ay_1+b(x_1-\left \lfloor \frac{a}{b} \right \rfloor y_1)$ ,故有 $x&#x3D;y_1, y&#x3D;x_1-\left \lfloor \frac{a}{b} \right \rfloor y_1$ </p>
